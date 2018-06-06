@@ -7,5 +7,6 @@ install:
 script:
   - mkdir build
   - cd build
-  - cmake ..
-  - make
+  - nvcc --version
+  #- cmake ..
+  #- make
