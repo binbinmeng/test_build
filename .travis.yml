@@ -4,7 +4,7 @@ os:
   - linux
   
 install:
-  - sudo apt-get install nvidia-cuda-toolkit
+  #- sudo apt-get install nvidia-cuda-toolkit
   
 script:
   
