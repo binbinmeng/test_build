@@ -1,12 +1,34 @@
 language: cpp
+cache: ccache
+sudo: required
+dist: trusty
 os:
   - linux
+env:
+  global:
+  - LANG="en_US.UTF-8"
+compiler:
+  - gcc
+
+
 install:
   - sudo apt-get install nvidia-cuda-toolkit
-  
+
 script:
-  - mkdir build
-  - cd build
+  - PATH=/usr/local/bin:$PATH
+  - cd docker
   - nvcc --version
-  #- cmake ..
-  #- make
+    #bash anakin_docker_build_and_run.sh -p NVIDIA-GPU -o Centos -m Build
+
+branches:
+  only:
+  - master
+  - developing
+
+notifications:
+  email:
+    recipients:
+    - xukailu@baidu.com
+    on_success: change
+    on_failure: always
+
