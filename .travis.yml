@@ -13,9 +13,11 @@ compiler:
 
 install:
   - sudo apt-get install nvidia-cuda-toolkit
+  - ll
   - wget https://developer.download.nvidia.com/compute/cuda/9.2/secure/Prod/local_installers/cuda-repo-ubuntu1604-9-2-local_9.2.88-1_amd64.deb?CtL1_E26Pi2VigBxVhj6ZuQ4wRjfPLLyONZmAHfBDuCfAfE2gPOQ8DsIntcLrii-0EHZ-ZJPyGoZWzg-dfmFfEjH5qXASmR3JZJ3vl1KFlSnIc-8O_xs2q11LAa-dmoRSpwI8domlUUqQAlEoAtK0_FHUGA9OFmzw5ve_ifYYKTT5gEijRfhbyNKbDsThPfWC6WXAeSmrZNpo00_Os0
+  - ll
 script:
-
+  - ll
   - PATH=/usr/local/bin:$PATH
   - nvcc --version
   - cd tools
