@@ -17,9 +17,8 @@ install:
 script:
   - PATH=/usr/local/bin:$PATH
   - nvcc --version
-  - mkdri build
-  - cmake ..
-  - make
+  - cd tools
+  - bash gpu_build.sh
     #bash anakin_docker_build_and_run.sh -p NVIDIA-GPU -o Centos -m Build
 
 branches:
