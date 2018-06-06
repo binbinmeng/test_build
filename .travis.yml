@@ -15,6 +15,7 @@ install:
   - sudo apt-get install nvidia-cuda-toolkit
 
 script:
+  - cd docker
   - PATH=/usr/local/bin:$PATH
   - nvcc --version
   - cd tools
