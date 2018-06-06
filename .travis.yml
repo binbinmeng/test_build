@@ -12,13 +12,16 @@ compiler:
 
 
 install:
-  - wget "https://developer.download.nvidia.com/compute/cuda/9.2/secure/Prod/local_installers/cuda-repo-ubuntu1604-9-2-local_9.2.88-1_amd64.deb?CtL1_E26Pi2VigBxVhj6ZuQ4wRjfPLLyONZmAHfBDuCfAfE2gPOQ8DsIntcLrii-0EHZ-ZJPyGoZWzg-dfmFfEjH5qXASmR3JZJ3vl1KFlSnIc-8O_xs2q11LAa-dmoRSpwI8domlUUqQAlEoAtK0_FHUGA9OFmzw5ve_ifYYKTT5gEijRfhbyNKbDsThPfWC6WXAeSmrZNpo00_Os0"
+  #- wget "https://developer.download.nvidia.com/compute/cuda/9.2/secure/Prod/local_installers/cuda-repo-ubuntu1604-9-2-local_9.2.88-1_amd64.deb?CtL1_E26Pi2VigBxVhj6ZuQ4wRjfPLLyONZmAHfBDuCfAfE2gPOQ8DsIntcLrii-0EHZ-ZJPyGoZWzg-dfmFfEjH5qXASmR3JZJ3vl1KFlSnIc-8O_xs2q11LAa-dmoRSpwI8domlUUqQAlEoAtK0_FHUGA9OFmzw5ve_ifYYKTT5gEijRfhbyNKbDsThPfWC6WXAeSmrZNpo00_Os0"
   #- sudo apt-get install nvidia-cuda-toolkit
   #- sudo dpkg -i cuda-repo-ubuntu1604_8-0_x86-64.deb
   #- sudo dpkg -i --force-overwrite cuda-repo-ubuntu1604_9.2.88-1_x86_64.deb
   #- sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/7fa2af80.pub
   #- sudo apt-get update
   #- sudo apt-get install cuda
+  - rpm -i cuda-repo-rhel7-8-0-local-ga2-8.0.61-1.x86_64.rpm
+  - yum clean all
+  - yum install cuda
 script:
   - ls -l
   - PATH=/usr/local/bin:$PATH
